@@ -1,0 +1,20 @@
+{
+  "name": "pipfeed-parser",
+  "version": "1.0.0",
+  "description": "Extracts HTML from a webpage",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "dompurify": "^2.0.3",
+    "express": "^4.17.1",
+    "jsdom": "^15.1.1",
+    "log-timestamp": "^0.3.0",
+    "readability": "https://github.com/mozilla/readability#2d358266560e669f13932d6197c6cff958bc3df6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  }
+}

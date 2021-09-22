@@ -1,0 +1,12 @@
+service: article-extract-engine
+
+frameworkVersion: ">=2.0.0 <2.70.0"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  extract:
+    handler: handler.extract
+    timeout: 100
