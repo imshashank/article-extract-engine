@@ -5,7 +5,7 @@ const axios = require('axios').default
 
 // Readability, dom and dom purify
 const {JSDOM} = require('jsdom')
-const readability = require('readability')
+var { Readability } = require('@mozilla/readability');
 const createDOMPurify = require('dompurify')
 const DOMPurify = createDOMPurify((new JSDOM('')).window)
 
@@ -21,7 +21,7 @@ module.exports.extract = (event, context, callback) => {
             const dom = new JSDOM(response.data, {
                 url: event.url
             })
-            const parsed = new readability(dom.window.document, {}).parse()
+            var parsed = new Readability(dom.window.document).parse();
             console.log('Fetched and parsed ' + event.url + ' successfully')
             return callback(null, {
                 statusCode: 200,
@@ -44,7 +44,4 @@ module.exports.extract = (event, context, callback) => {
             };
             return callback(null, response);
         });
-
-
 };
-

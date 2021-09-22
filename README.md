@@ -9,12 +9,14 @@ authorLink: 'https://github.com/imshashank'
 authorName: 'Shashank Agarwal'
 authorAvatar: 'https://avatars.githubusercontent.com/u/778870?v=4'
 -->
-# Serverless Readability Extract Article using Node.js
 
-Use firefox's Readability to extract any article. Can be used to support Reader Mode in any app. Used AWS Lambda as the 
+# Article Extract Serverless API using Node.js & Readability
+
+Use firefox's Readability to extract any article. Can be used to support Reader Mode in any app. Used AWS Lambda as the
 backend. This was used as one of the systems to extract article by the Pipfeed(pipfeed.com) backend.
 
 Used:
+
 - Readability: https://github.com/mozilla/readability
 
 ## Use-cases
@@ -30,7 +32,8 @@ Used:
 
 ## How it works
 
-Load Readability as a node module and extracts the article and returns the title, body and other field it was able to extract.
+Load Readability as a node module and extracts the article and returns the title, body and other field it was able to
+extract.
 
 ## Setup
 
@@ -95,7 +98,6 @@ npm install -g serverless
 serverless invoke --function=extract --log --data '{ "url": "https://system.camp/startups/understanding-kpis-for-mobile-apps-and-how-to-measure-kpis/" }'
 ```
 
-
 The expected result should be similar to:
 
 ```bash
@@ -117,10 +119,11 @@ END RequestId: 1737de56-085d-4e65-9562-e70d54ef4dd5
 REPORT RequestId: 1737de56-085d-4e65-9562-e70d54ef4dd5	Duration: 1353.61 ms	Billed Duration: 1354 ms	Memory Size: 1024 MB	Max Memory Used: 162 MB
 ```
 
-The deployment will create a cloudformation stack that will deploy a AWS Lambda function.
-You can test the lambda by simply passing a JSON string.
+The deployment will create a cloudformation stack that will deploy a AWS Lambda function. You can test the lambda by
+simply passing a JSON string.
 
 ### Payload for invoking lambda function
+
 ```
 {
   "url": "https://blog.producthunt.com/how-i-built-a-2-product-of-the-day-in-2-hours-6e94ef6ea2c1"
