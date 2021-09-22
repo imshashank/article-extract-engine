@@ -130,6 +130,13 @@ simply passing a JSON string.
 }
 ```
 
+### Deleting the stack
+
+To delete the cloudformation stack, run this command
+```
+serverless remove
+```
+
 ## License
 
     Licensed under the Apache License, Version 2.0 (the "License");
